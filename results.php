@@ -1,6 +1,6 @@
 <?php 
 
-$con = mysqli_connect("localhost", "root", "root", "TO");
+include 'settings.php';
 $quiz_id = $_POST['quiz_id'];
 $res = mysqli_query($con, "SELECT * FROM questions WHERE quiz_id = $quiz_id");
 

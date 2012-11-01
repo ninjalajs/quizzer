@@ -1,19 +1,6 @@
 <?php
 
-	//$img_data = file_get_contents($_FILES['image']['tmp_name']);
-	//$filename = md5(uniqid(rand()));
-	//move_uploaded_file($_FILES['image']['tmp_name'], getcwd() . "/uploads/" . $filename);
-	//$con = mysqli_connect("localhost", "root", "root", "TO");
-	//$img_data = mysqli_real_escape_string($con, $img_data);
-	//$sql = "INSERT INTO questions (question, quiz_id, image) VALUES ('Ko?', 1, '$img_data')";
-	//echo $sql;
-	//mysqli_query($con, $sql);
-	//die();
-
-
-
-
-	$con = mysqli_connect("localhost", "root", "root", "TO");
+	include 'settings.php';
 
 	$name = $_POST['name'];
 
@@ -36,11 +23,6 @@
 			$i++;
 		}
 
-		//$row = mysqli_fetch_assoc($res);
-		//if ($answer == $row['answer']) {
-		//	$correct++;
-		//}
-		//$total++;
 	}
 
 ?>

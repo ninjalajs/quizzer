@@ -3,9 +3,9 @@
 
 SELECT * FROM quizzes WHERE id = 1 */
 
-$con = mysqli_connect("localhost", "root", "root", "TO");
+include 'settings.php';
 
-$quiz_id = $_GET['quiz_id'];
+$quiz_id = $_GET['quiz_id'];	
 $sql = "SELECT * FROM quizzes WHERE id = $quiz_id";
 
 $res = mysqli_query($con, $sql);

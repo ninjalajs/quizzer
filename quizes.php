@@ -5,7 +5,7 @@
 <ul>
 	<?php
 	//$con = mysqli_connect("lisa-163804.mysql.binero.se", "163804_ue24667", "GLHF", "163804-lisa");
-	$con = mysqli_connect("localhost", "root", "root", "TO");
+	include 'settings.php';
 
 	$sql = "SELECT * FROM quizzes";
 

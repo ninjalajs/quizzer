@@ -1,13 +1,26 @@
 <!doctype html>
 <style>
 #wrapper {
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
     border: 10px solid silver;
     margin-top: 40px;
     padding: 20px;
     padding-bottom: 20px;
-  }
+		}
+
+	body {
+		background:white;
+		font-size: 20px;
+		text-decoration:none;
+		color:#000;
+		text-shadow: 1px 1px 0px rgba(150, 150, 150, 1);
+	}
+		
+	img {
+		max-width:100%;
+		height:auto;
+		}
   
 </style>
 <html>

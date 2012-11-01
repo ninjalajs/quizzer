@@ -3,8 +3,7 @@
 
 
 if (isset ($_POST['pass'])) {
-	$con = mysqli_connect("localhost", "root", "root", "TO");
-
+	include 'settings.php';
 
 	$username = $_POST['user'];
 	$password= $_POST['pass'];
