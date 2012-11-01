@@ -24,7 +24,9 @@ $name = $row['name'];
 	  $res = mysqli_query($con, "SELECT * FROM questions WHERE quiz_id = $quiz_id");
 
 	  while ($row = mysqli_fetch_assoc($res)) {
+	  	$filename = $row['filename'];
 	    echo "<li>";
+	    echo "<img src='uploads/$filename'>";
 	    echo $row['question'];
 	    echo '<input type="text" name="answers[]">';
 	    echo "</li>";

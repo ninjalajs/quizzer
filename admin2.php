@@ -2,7 +2,7 @@
 
 	//$img_data = file_get_contents($_FILES['image']['tmp_name']);
 	//$filename = md5(uniqid(rand()));
-	//move_uploaded_file($_FILES['image']['tmp_name'], "/Applications/MAMP/htdocs/uploads/" . $filename);
+	//move_uploaded_file($_FILES['image']['tmp_name'], getcwd() . "/uploads/" . $filename);
 	//$con = mysqli_connect("localhost", "root", "root", "TO");
 	//$img_data = mysqli_real_escape_string($con, $img_data);
 	//$sql = "INSERT INTO questions (question, quiz_id, image) VALUES ('Ko?', 1, '$img_data')";
@@ -26,8 +26,12 @@
   $i = 0;
 	foreach($_POST['questions'] as $question) {
 		$answer = $_POST['answers'][$i];
+
 		if ($question != '' && $answer != '') {
-			$sql = "INSERT INTO questions (question, answer, quiz_id) VALUES ('$question', '$answer', $quiz_id)";
+			$filename = md5(uniqid(rand()));
+			move_uploaded_file($_FILES['image']['tmp_name'][$i], getcwd() . "/uploads/" . $filename);
+
+			$sql = "INSERT INTO questions (question, answer, quiz_id, filename) VALUES ('$question', '$answer', $quiz_id, '$filename')";
 			mysqli_query($con, $sql);
 			$i++;
 		}

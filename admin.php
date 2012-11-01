@@ -63,18 +63,27 @@ if (isset ($_POST['pass'])) {
 
 	<h2>SKAPA FRÅGOR</h2>
 
-	<input type="file" name="image"><br><br>
 
 	Fråga 1: <input type="text" name="questions[]"><br>
 	Svar 1: <input type="text" name="answers[]"><br><br>
+	Bild 1: <input type="file" name="image[]"><br><br><br>
+
 	Fråga 2: <input type="text" name="questions[]"><br>
 	Svar 2: <input type="text" name="answers[]"><br><br>
+	Bild 2: <input type="file" name="image[]"><br><br><br>
+
 	Fråga 3: <input type="text" name="questions[]"><br>
 	Svar 3: <input type="text" name="answers[]"><br><br>
+	Bild 3: <input type="file" name="image[]"><br><br><br>
+
 	Fråga 4: <input type="text" name="questions[]"><br>
 	Svar 4: <input type="text" name="answers[]"><br><br>
+	Bild 4: <input type="file" name="image[]"><br><br><br>
+
 	Fråga 5: <input type="text" name="questions[]"><br>
 	Svar 5: <input type="text" name="answers[]"><br>
+	Bild 5: <input type="file" name="image[]"><br><br><br>
+
 	<input type="submit">
 
 </form>
