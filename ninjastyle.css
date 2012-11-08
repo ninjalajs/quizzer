@@ -1,0 +1,43 @@
+/* mobilsize */
+body {
+	background: fuchsia;
+	font-size: 12px;
+	text-decoration:underline;
+	color:#FFF;
+}
+
+	#wrapper {
+	background: red;
+	}
+
+
+/* ipadsize */
+@media screen and (min-width: 600px) {
+	body {
+		background: green;
+		font-size:20px;
+		color:#000;
+		text-shadow: 4px 4px 2px rgba(150, 0, 150, 1);
+	}
+	
+	#wrapper{
+		background: yellow;
+		width:50%;
+		height:auto;
+	}
+}
+
+/* fullsize */
+@media screen and (min-width: 960px) {
+	body {
+		background:white;
+		font-size: 28px;
+		text-decoration:none;
+		color:#654212;
+		text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+	}
+	
+	#wrapper:{
+		background:white;
+		}
+}
