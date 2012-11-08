@@ -1,5 +1,5 @@
 <?php
-
+	
 	include 'settings.php';
 
 	$name = $_POST['name'];
@@ -7,8 +7,10 @@
   $sql = "INSERT INTO quizzes (name) VALUES ('$name')";
   mysqli_query($con, $sql);
 
+
   $res = mysqli_query($con, "SELECT MAX(id) AS id FROM quizzes");
-  $quiz_id = mysqli_fetch_assoc($res)['id'];
+  $row = mysqli_fetch_assoc($res);
+  $quiz_id = $row['id'];
 
   $i = 0;
 	foreach($_POST['questions'] as $question) {
